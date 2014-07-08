@@ -1,4 +1,9 @@
 #include "Piece.h"
+Piece::Piece(){
+	row = -1;
+	column = -1;
+	whitePiece = true;
+}
 Piece::Piece(int startingRow, int startingColumn, bool isWhite){
 	row = startingRow;
 	column = startingColumn;
@@ -17,5 +22,8 @@ void Piece::setColumn(int newColumn){
 	column = newColumn;
 }
 bool Piece::isWhite(){
-	return whitePiece
+	return whitePiece;
+}
+char Piece::getType(){
+	return 'N';
 }

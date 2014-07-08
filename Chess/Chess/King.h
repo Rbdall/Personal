@@ -5,7 +5,9 @@
 class King : public Piece{
 private:
 public:
-
+	King();
+	King(int startingRow, int startingColumn, bool isWhite);
+	char getType();
 };
 
 #endif // !King_H

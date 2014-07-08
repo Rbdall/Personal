@@ -12,12 +12,14 @@ class Piece{
 		std::vector<Move> possibleMoves;
 		bool whitePiece; 
 	public:
+		Piece();
 		Piece(int startingRow, int startingColumn, bool isWhite);
 		int getRow();
 		int getColumn();
 		void setRow(int newRow);
 		void setColumn(int newColumn);
 		bool isWhite();
+		virtual char getType();
 		std::vector<Move> getPossibleMoves;
 		void setPossibleMoves();
 

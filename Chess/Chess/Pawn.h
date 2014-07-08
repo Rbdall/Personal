@@ -5,6 +5,10 @@
 class Pawn: public Piece{
 private:
 public:
+	Pawn();
+	Pawn(int startingRow, int startingColumn, bool isWhite);
+	char getType();
+	
 
 };
 

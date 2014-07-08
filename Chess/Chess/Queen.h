@@ -5,7 +5,9 @@
 class Queen : public Piece{
 private:
 public:
-
+	Queen();
+	Queen(int startingRow, int startingColumn, bool isWhite);
+	char getType();
 };
 
 #endif // !Queen_H
