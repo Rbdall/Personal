@@ -1,9 +1,21 @@
 #ifndef PIECE_H
 #define PIECE_H
 #include <vector>
-struct Move{
-	int row;
-	int col;
+class Move{
+	private:	
+		int row;
+		int column;
+	public:
+		Move(int newRow, int newColumn){
+			row = newRow;
+			column = newColumn;
+		}
+		int getRow(){
+			return row;
+		}
+		int getColumn(){
+			return column;
+		}
 };
 class Piece{
 	private:
@@ -20,8 +32,9 @@ class Piece{
 		void setColumn(int newColumn);
 		bool isWhite();
 		virtual char getType();
-		std::vector<Move> getPossibleMoves;
-		void setPossibleMoves();
+
+		virtual std::vector<Move> getPossibleMoves();
+		void makeMove(Move endPosition);
 
 
 };

@@ -8,7 +8,7 @@ class Board{
 		bool checkMate;
 	public:
 		Board();
-		Piece getPiece(int row, int column);
+		Piece* getPiece(int row, int column);
 		void printLocations();
 		void printBoard();
 

@@ -4,3 +4,7 @@ Knight::Knight(int startingRow, int startingColumn, bool isWhite) : Piece(starti
 char Knight::getType(){
 	return 'H';
 }
+std::vector<Move> Knight::getPossibleMoves(){
+	std::vector<Move> possible;
+	return possible;
+}

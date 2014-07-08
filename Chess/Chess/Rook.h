@@ -8,6 +8,7 @@ public:
 	Rook();
 	Rook(int startingRow, int startingColumn, bool isWhite);
 	char getType();
+	std::vector<Move> getPossibleMoves();
 };
 
 #endif // !ROOK_H

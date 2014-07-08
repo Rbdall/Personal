@@ -8,6 +8,7 @@ public:
 	Queen();
 	Queen(int startingRow, int startingColumn, bool isWhite);
 	char getType();
+	std::vector<Move> getPossibleMoves();
 };
 
 #endif // !Queen_H

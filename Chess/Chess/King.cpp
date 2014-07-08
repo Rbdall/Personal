@@ -4,3 +4,7 @@ King::King(int startingRow, int startingColumn, bool isWhite) : Piece(startingRo
 char King::getType(){
 	return 'K';
 }
+std::vector<Move> King::getPossibleMoves(){
+	std::vector<Move> possible;
+	return possible;
+}

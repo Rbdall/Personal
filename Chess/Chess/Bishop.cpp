@@ -4,3 +4,7 @@ Bishop::Bishop(int startingRow, int startingColumn, bool isWhite) : Piece(starti
 char Bishop::getType(){
 	return 'B';
 }
+std::vector<Move> Bishop::getPossibleMoves(){
+	std::vector<Move> possible;
+	return possible;
+}

@@ -27,3 +27,7 @@ bool Piece::isWhite(){
 char Piece::getType(){
 	return 'N';
 }
+void Piece::makeMove(Move endPosition){
+	setRow(endPosition.getRow());
+	setColumn(endPosition.getColumn());
+}

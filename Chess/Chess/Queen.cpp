@@ -4,3 +4,7 @@ Queen::Queen(int startingRow, int startingColumn, bool isWhite) : Piece(starting
 char Queen::getType(){
 	return 'Q';
 }
+std::vector<Move> Queen::getPossibleMoves(){
+	std::vector<Move> possible;
+	return possible;
+}

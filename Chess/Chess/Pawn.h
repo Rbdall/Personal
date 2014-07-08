@@ -4,11 +4,12 @@
 
 class Pawn: public Piece{
 private:
+	bool homeRow;
 public:
 	Pawn();
 	Pawn(int startingRow, int startingColumn, bool isWhite);
 	char getType();
-	
+	std::vector<Move> getPossibleMoves();
 
 };
 

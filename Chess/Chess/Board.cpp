@@ -80,3 +80,12 @@ void Board::printBoard(){
 		std::cout << std::endl;
 	}
 }
+
+Piece* Board::getPiece(int row, int column){
+	for (size_t i = 0; i < pieces.size(); i++){
+		if (pieces[i]->getRow() == row && pieces[i]->getColumn() == column){
+			return pieces[i];
+		}
+	}
+	return NULL;
+}

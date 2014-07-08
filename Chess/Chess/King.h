@@ -8,6 +8,7 @@ public:
 	King();
 	King(int startingRow, int startingColumn, bool isWhite);
 	char getType();
+	std::vector<Move> getPossibleMoves();
 };
 
 #endif // !King_H
