@@ -4,11 +4,13 @@
 #include <vector>
 class Board{
 	private:
-		std::vector<Piece*> pieces;
+		//std::vector<Piece*> pieces;
+		Piece* board[8][8];
 		bool checkMate;
 	public:
 		Board();
 		Piece* getPiece(int row, int column);
+		void movePiece();
 		void printLocations();
 		void printBoard();
 

@@ -21,6 +21,7 @@ class Piece{
 	private:
 		int row;
 		int column;
+		//Board* localBoard;
 		std::vector<Move> possibleMoves;
 		bool whitePiece; 
 	public:
@@ -33,7 +34,7 @@ class Piece{
 		bool isWhite();
 		virtual char getType();
 
-		virtual std::vector<Move> getPossibleMoves();
+		//virtual std::vector<Move> getPossibleMoves();
 		void makeMove(Move endPosition);
 
 

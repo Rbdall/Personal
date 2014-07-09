@@ -8,6 +8,7 @@ Piece::Piece(int startingRow, int startingColumn, bool isWhite){
 	row = startingRow;
 	column = startingColumn;
 	whitePiece = isWhite;
+	//localBoard = myBoard;
 }
 int Piece::getRow(){
 	return row;

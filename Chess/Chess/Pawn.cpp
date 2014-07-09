@@ -1,6 +1,6 @@
 #include "Pawn.h"
 Pawn::Pawn() :Piece(){homeRow = true;}
-Pawn::Pawn(int startingRow, int startingColumn, bool isWhite) : Piece(startingRow, startingColumn, isWhite){homeRow = true;}
+Pawn::Pawn(int startingRow, int startingColumn, bool isWhite) : Piece(startingRow, startingColumn, isWhite){ homeRow = true; }
 char Pawn::getType(){
 	return 'P';
 }
@@ -12,8 +12,11 @@ std::vector<Move> Pawn::getPossibleMoves(){
 		possible.push_back(Move(getRow() + 2, getColumn()));
 		return possible;
 	}
-	else{
+	else if(getRow() + 1 < 8){
 		possible.push_back(Move(getRow() + 1, getColumn()));
+		return possible;
+	}
+	else{
 		return possible;
 	}
 	
