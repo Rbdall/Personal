@@ -1,4 +1,5 @@
 #include "Piece.h"
+#include "Board.h"
 Piece::Piece(){
 	row = -1;
 	column = -1;
@@ -35,4 +36,7 @@ void Piece::makeMove(Move endPosition){
 std::vector<Move> Piece::getPossibleMoves(){
 	std::vector<Move> moves;
 	return moves;
+}
+Board* Piece::getBoard(){
+	return localBoard;
 }

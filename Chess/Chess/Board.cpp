@@ -64,19 +64,37 @@ void Board::printBoard(){
 		}
 	}
 	for (int i = 0; i < 8; i++){
+		std::cout << i;
+	}
+	std::cout << std::endl;
+	for (int i = 0; i < 8; i++){
 		for (int j = 0; j < 8; j++){
 			std::cout << printableBoard[i][j];
 		}
+		std::cout << i;
 		std::cout << std::endl;
 	}
 }
 
 Piece* Board::getPiece(int row, int column){
+	if (row < 0 || row > 7){
+		return NULL;
+	}
+	if (column < 0 || column > 7){
+		return NULL;
+	}
 	return board[row][column];
 }
 
-void Board::makeMove(int startingRow, int startingColumn, Move move){
-	board[startingRow][startingColumn]->makeMove(move);
-	board[move.getRow()][move.getColumn()] = board[startingRow][startingColumn];
-	board[startingRow][startingColumn] = NULL;
+bool Board::makeMove(Piece* piece, Move move){
+	if (move.getRow() < 0 || move.getRow() > 7){
+		return false;
+	}
+	if (move.getColumn() < 0 || move.getColumn() > 7){
+		return false;
+	}
+	board[piece->getRow()][piece->getColumn()] = NULL;
+	piece->makeMove(move);
+	board[move.getRow()][move.getColumn()] = piece;
+	return true;
 }

@@ -30,6 +30,7 @@ class Piece{
 		Piece(int startingRow, int startingColumn, bool isWhite, Board* myBoard);
 		int getRow();
 		int getColumn();
+		Board* getBoard();
 		void setRow(int newRow);
 		void setColumn(int newColumn);
 		bool isWhite();

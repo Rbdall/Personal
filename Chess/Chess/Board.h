@@ -4,7 +4,6 @@
 #include <vector>
 class Board{
 	private:
-		bool checkMate;
 	public:
 		Piece* board[8][8];
 		Board();
@@ -12,7 +11,7 @@ class Board{
 		void movePiece();
 		void printLocations();
 		void printBoard();
-		void makeMove(int startingRow, int startingColumn, Move move);
+		bool makeMove(Piece* piece, Move move);
 };
 
 #endif // !BOARD_H

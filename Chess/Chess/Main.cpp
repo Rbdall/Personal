@@ -1,21 +1,41 @@
 #include <iostream>
+#include <string>
 #include "Board.h"
 #include "Piece.h"
+#include "Test.h"
 int main(){
-	Board* gameBoard = new Board();
-	//gameBoard->printLocations();
-	gameBoard->printBoard();
-	system("cls");
-	Move move(3,3);
-	gameBoard->makeMove(0, 0, move);
-	//Piece* test = gameBoard->getPiece(0, 7);
-	//if (test != NULL){
-	//	std::vector<Move> test2 = test->getPossibleMoves();
-	//	for (size_t i = 0; i < test2.size(); i++){
-	//	std::cout << test2[i].getRow();
-	//	std::cout << " ";
-	//	std::cout << test2[i].getColumn() << std::endl;
-	//	}
-	//}
-	gameBoard->printBoard();
+	bool DEBUGGING = false;
+	if (DEBUGGING){
+		runTests();
+	}
+	else{
+		Board* gameBoard = new Board();
+		bool whiteTurn = true;
+		bool checkMate = false;
+		while (!checkMate){
+			if (whiteTurn){
+				gameBoard->printBoard();
+				std::cout << "Pick piece to move, format: row,col" << std::endl;
+				std::string inputStart;
+				std::cin >> inputStart;
+				std::cout << "Pick position to move to, format: row,col" << std::endl;
+				std::string inputEnd;
+				std::cin >> inputEnd;
+				Move move(inputEnd[0] - '0', inputEnd[2] - '0');
+				gameBoard->makeMove(gameBoard->getPiece(inputStart[0] - '0', inputStart[2] - '0'), move);
+			}
+			else{
+				gameBoard->printBoard();
+				std::cout << "Pick piece to move, format: row,col" << std::endl;
+				std::string inputStart;
+				std::cin >> inputStart;
+				std::cout << "Pick position to move to, format: row,col" << std::endl;
+				std::string inputEnd;
+				std::cin >> inputEnd;
+				Move move(inputEnd[0] - '0', inputEnd[2] - '0');
+				gameBoard->makeMove(gameBoard->getPiece(inputStart[0] - '0', inputStart[2] - '0'), move);
+			}
+		}
+
+	}
 }
