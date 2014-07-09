@@ -1,6 +1,7 @@
 #ifndef PIECE_H
 #define PIECE_H
 #include <vector>
+class Board;
 class Move{
 	private:	
 		int row;
@@ -21,12 +22,12 @@ class Piece{
 	private:
 		int row;
 		int column;
-		//Board* localBoard;
+		Board* localBoard;
 		std::vector<Move> possibleMoves;
 		bool whitePiece; 
 	public:
 		Piece();
-		Piece(int startingRow, int startingColumn, bool isWhite);
+		Piece(int startingRow, int startingColumn, bool isWhite, Board* myBoard);
 		int getRow();
 		int getColumn();
 		void setRow(int newRow);
@@ -34,7 +35,7 @@ class Piece{
 		bool isWhite();
 		virtual char getType();
 
-		//virtual std::vector<Move> getPossibleMoves();
+		virtual std::vector<Move> getPossibleMoves();
 		void makeMove(Move endPosition);
 
 

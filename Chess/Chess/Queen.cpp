@@ -1,6 +1,6 @@
 #include "Queen.h"
 Queen::Queen() :Piece(){}
-Queen::Queen(int startingRow, int startingColumn, bool isWhite) : Piece(startingRow, startingColumn, isWhite){}
+Queen::Queen(int startingRow, int startingColumn, bool isWhite, Board* myBoard) : Piece(startingRow, startingColumn, isWhite, myBoard){}
 char Queen::getType(){
 	return 'Q';
 }

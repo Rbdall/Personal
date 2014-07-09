@@ -1,6 +1,6 @@
 #include "Pawn.h"
 Pawn::Pawn() :Piece(){homeRow = true;}
-Pawn::Pawn(int startingRow, int startingColumn, bool isWhite) : Piece(startingRow, startingColumn, isWhite){ homeRow = true; }
+Pawn::Pawn(int startingRow, int startingColumn, bool isWhite, Board* myBoard) : Piece(startingRow, startingColumn, isWhite, myBoard){ homeRow = true; }
 char Pawn::getType(){
 	return 'P';
 }

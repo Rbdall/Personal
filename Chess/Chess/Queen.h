@@ -6,7 +6,7 @@ class Queen : public Piece{
 private:
 public:
 	Queen();
-	Queen(int startingRow, int startingColumn, bool isWhite);
+	Queen(int startingRow, int startingColumn, bool isWhite, Board* myBoard);
 	char getType();
 	std::vector<Move> getPossibleMoves();
 };

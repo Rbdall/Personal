@@ -6,7 +6,7 @@ class Rook : public Piece{
 private:
 public:
 	Rook();
-	Rook(int startingRow, int startingColumn, bool isWhite);
+	Rook(int startingRow, int startingColumn, bool isWhite, Board* myBoard);
 	char getType();
 	std::vector<Move> getPossibleMoves();
 };

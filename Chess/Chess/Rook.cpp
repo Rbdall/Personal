@@ -1,6 +1,6 @@
 #include "Rook.h"
 Rook::Rook() :Piece(){}
-Rook::Rook(int startingRow, int startingColumn, bool isWhite) : Piece(startingRow, startingColumn, isWhite){}
+Rook::Rook(int startingRow, int startingColumn, bool isWhite, Board* myBoard) : Piece(startingRow, startingColumn, isWhite, myBoard){}
 char Rook::getType(){
 	return 'R';
 }

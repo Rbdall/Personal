@@ -4,16 +4,15 @@
 #include <vector>
 class Board{
 	private:
-		//std::vector<Piece*> pieces;
-		Piece* board[8][8];
 		bool checkMate;
 	public:
+		Piece* board[8][8];
 		Board();
 		Piece* getPiece(int row, int column);
 		void movePiece();
 		void printLocations();
 		void printBoard();
-
+		void makeMove(int startingRow, int startingColumn, Move move);
 };
 
 #endif // !BOARD_H

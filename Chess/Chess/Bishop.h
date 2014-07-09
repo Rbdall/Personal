@@ -6,7 +6,7 @@ class Bishop : public Piece{
 private:
 public:
 	Bishop();
-	Bishop(int startingRow, int startingColumn, bool isWhite);
+	Bishop(int startingRow, int startingColumn, bool isWhite, Board* myBoard);
 	char getType();
 	std::vector<Move> getPossibleMoves();
 };

@@ -5,9 +5,9 @@ int main(){
 	Board* gameBoard = new Board();
 	//gameBoard->printLocations();
 	gameBoard->printBoard();
-	//system("cls");
-	//Move move(3,3);
-	//(gameBoard->getPiece(0, 0))->makeMove(move);
+	system("cls");
+	Move move(3,3);
+	gameBoard->makeMove(0, 0, move);
 	//Piece* test = gameBoard->getPiece(0, 7);
 	//if (test != NULL){
 	//	std::vector<Move> test2 = test->getPossibleMoves();
@@ -17,5 +17,5 @@ int main(){
 	//	std::cout << test2[i].getColumn() << std::endl;
 	//	}
 	//}
-	//gameBoard->printBoard();
+	gameBoard->printBoard();
 }

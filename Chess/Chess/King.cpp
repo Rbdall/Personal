@@ -1,6 +1,6 @@
 #include "King.h"
 King::King() :Piece(){}
-King::King(int startingRow, int startingColumn, bool isWhite) : Piece(startingRow, startingColumn, isWhite){}
+King::King(int startingRow, int startingColumn, bool isWhite, Board* myBoard) : Piece(startingRow, startingColumn, isWhite, myBoard){}
 char King::getType(){
 	return 'K';
 }

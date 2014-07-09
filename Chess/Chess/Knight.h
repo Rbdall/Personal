@@ -6,7 +6,7 @@ class Knight : public Piece{
 private:
 public:
 	Knight();
-	Knight(int startingRow, int startingColumn, bool isWhite);
+	Knight(int startingRow, int startingColumn, bool isWhite, Board* myBoard);
 	char getType();
 	std::vector<Move> getPossibleMoves();
 };

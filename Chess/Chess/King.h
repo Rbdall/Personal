@@ -6,7 +6,7 @@ class King : public Piece{
 private:
 public:
 	King();
-	King(int startingRow, int startingColumn, bool isWhite);
+	King(int startingRow, int startingColumn, bool isWhite, Board* myBoard);
 	char getType();
 	std::vector<Move> getPossibleMoves();
 };

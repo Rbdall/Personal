@@ -7,7 +7,7 @@ private:
 	bool homeRow;
 public:
 	Pawn();
-	Pawn(int startingRow, int startingColumn, bool isWhite);
+	Pawn(int startingRow, int startingColumn, bool isWhite, Board* myBoard);
 	char getType();
 	std::vector<Move> getPossibleMoves();
 
