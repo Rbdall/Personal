@@ -17,6 +17,12 @@ class Move{
 		int getColumn(){
 			return column;
 		}
+		bool operator==(Move& rhs) { 
+			if (rhs.getRow() == getRow() && rhs.getColumn() == getColumn()){
+				return true;
+			}
+			return false;
+		}
 };
 class Piece{
 	private:

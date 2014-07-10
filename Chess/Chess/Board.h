@@ -12,6 +12,7 @@ class Board{
 		void printLocations();
 		void printBoard();
 		bool makeMove(Piece* piece, Move move);
+		void printPossibleMoves(std::vector<Move> moves);
 };
 
 #endif // !BOARD_H

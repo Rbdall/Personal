@@ -7,6 +7,7 @@
 #include "Queen.h"
 #include "Rook.h"
 #include <iostream>
+#include <vector>
 Board::Board(){
 	//Set up the black side of the board
 	for (int i = 0; i < 8; i++){
@@ -95,6 +96,16 @@ bool Board::makeMove(Piece* piece, Move move){
 	}
 	board[piece->getRow()][piece->getColumn()] = NULL;
 	piece->makeMove(move);
+	if (board[move.getRow()][move.getColumn()] != NULL){
+		delete board[move.getRow()][move.getColumn()];
+	}
 	board[move.getRow()][move.getColumn()] = piece;
 	return true;
+
+}
+
+void Board::printPossibleMoves(std::vector<Move> moves){
+	for (size_t i = 0; i < moves.size(); i++){
+		std::cout << "(" << moves[i].getRow() << "," << moves[i].getColumn() << ") ";
+	}
 }
